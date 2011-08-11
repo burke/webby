@@ -87,6 +87,8 @@ class AutoBuilder
 
     Signal.trap('INT') {
       puts "Autobuild is stopping, please wait..."
+
+      exit # some reason watchr is blocking...
       @watcher.stop
       @web_server.stop if @web_server
     }
