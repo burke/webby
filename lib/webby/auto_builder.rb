@@ -124,7 +124,7 @@ class AutoBuilder
       @thread = nil
       @running = false
       @server = WEBrick::HTTPServer.new(
-        :BindAddress   => 'localhost',
+        :BindAddress   => '0.0.0.0',
         :Port          => ::Webby.site.web_port,
         :DocumentRoot  => ::Webby.site.output_dir,
         :FancyIndexing => true,
